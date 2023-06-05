@@ -3,8 +3,8 @@ sys.path.append("/home/youngpasha/project/tetris/app/Board")
 import pytest
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QKeyEvent
-from .Board import Board
-from .Shape import Tetrominoe, Shape
+from app import Board
+from app import Shape
 from PyQt5.QtCore import Qt, QBasicTimer, pyqtSignal, QTimerEvent
 
 class TestTetris:
