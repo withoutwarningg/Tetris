@@ -18,4 +18,4 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run tests
         run: | 
-            SDL_VIDEODRIVER=dummy PYTHONPATH=. pytest tests/my_tests.py
+            SDL_VIDEODRIVER=dummy PYTHONPATH=. pytest tests/test.py
