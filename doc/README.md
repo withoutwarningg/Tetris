@@ -80,7 +80,7 @@
 
 ## Диаграмма активности:
 	1) Старт
-	![Image alt](https://github.com/{withoutwarningg}/{Tetris}/raw/{/home/youngpasha/project/tetris/screens}/startactivity.png)
+	![Image alt](https://github.com/{withoutwarningg}/{Tetris}/raw/{https://github.com/withoutwarningg/Tetris/tree/main/screens}/startactivity.png)
 	Сценарий начала игры. Пользователь взамиодействует с ним в начале работы с приложением. Здесь показывается стартовая отрисовка поля и фигурки, её движение при различных сценариях, взаимодейстиве с игровым полем (стаканом).
 	
 	2) Свободное падение фигурки
