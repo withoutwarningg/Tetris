@@ -26,4 +26,4 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics  
       - name: Test with pytest  
         run: |  
-          SDL_VIDEODRIVER=dummy PYTHONPATH=. pytest tests/test.py -n 4
+          SDL_VIDEODRIVER=dummy PYTHONPATH=. pytest -n 4 tests/test.py
