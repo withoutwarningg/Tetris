@@ -1,21 +1,24 @@
-name: Automated tests
+name: Test
 
 on:
-  push
+  push:
+    branches:
+      - main
 
 jobs:
   test:
     runs-on: ubuntu-latest
-
+    env:
+      PYTEST_ADDOPTS: "-n 4" # Количество процессорных ядер
+    container:
+      image: python:3.10
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.10"
-      - name: install dependencies
-        run: pip install -r requirements.txt
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          pip install -r requirements.txt
       - name: Run tests
-        run: | 
-            SDL_VIDEODRIVER=dummy PYTHONPATH=. pytest tests/test.py
+        run: |
+          SDL_VIDEODRIVER=dummy PYTHONPATH=. pytest tests/test.py
