@@ -1,5 +1,6 @@
 import random
 
+
 class Tetrominoe(object):
 
     NoShape = 0
@@ -10,7 +11,6 @@ class Tetrominoe(object):
     SquareShape = 5
     LShape = 6
     MirroredLShape = 7
-
 
 '''КЛАСС ИНФОРМАЦИЯ О ЧАСТЯХ ТЕТРИСА'''
 class Shape(object):
@@ -27,7 +27,7 @@ class Shape(object):
     )
 
     def __init__(self):
-
+        # Координаты квадратиков фигурки
         self.coords = [[0,0] for i in range(4)]
         self.pieceShape = Tetrominoe.NoShape
 

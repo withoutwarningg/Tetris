@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QApplication
-from Board import Board
+from app.Board import Board
 
 
 '''КЛАСС Основное окно игры'''

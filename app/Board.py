@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QFrame
 from PyQt5.QtCore import Qt, QBasicTimer, pyqtSignal
 from PyQt5.QtGui import QPainter, QColor
-from Shape import Shape, Tetrominoe
+from app.Shape import Shape, Tetrominoe
 
 
 '''КЛАСС ИГРОВОЕ ПОЛЕ'''
