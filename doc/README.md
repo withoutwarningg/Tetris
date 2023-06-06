@@ -111,10 +111,60 @@
 
 
 	
+## Реализация:	
+## Ошибка номер 1
+# Тест 15
+Данные:
+	shape.setX(0, 1)
+        shape.setY(0, 1)
+        shape.setX(1, 1)
+        shape.setY(1, 2)
+        shape.setX(2, 2)
+        shape.setY(2, 2)
+        shape.setX(3, 2)
+        shape.setY(3, 3)
+        
+Ожидаемые данные:
+
+	assert rotated_shape.x(0) == -1
+        assert rotated_shape.y(0) == 1
+        assert rotated_shape.x(1) == -2
+        assert rotated_shape.y(1) == 1
+        assert rotated_shape.x(2) == -2
+        assert rotated_shape.y(2) == 2
+        assert rotated_shape.x(3) == -3
+        assert rotated_shape.y(3) == 2
+        
+        
+Реальные данные: 
+
+	все знаки наоборот при таких же значениях
 	
 	
-	
+ПРичина:
+
+	была написана функция вращения вокруг y == -x; что противоречило остальной программе (исправлено)	
+                
+        
+## Ошибка номер 2
+# Тест 15	
+for i in range(5):
+for j in range(Board.BoardWidth):
+assert self.board.shapeAt(j, i) == Tetrominoe.NoShape
+for i in range(5, Board.BoardHeight):
+for j in range(Board.BoardWidth):
+> assert self.board.shapeAt(j, i) == Tetrominoe.LineShape
+E assert 0 == 3
+E + where 0 = <bound method Board.shapeAt of <tetr.Board object at 0x00000121D14DF370»(0, 5)
+E + where <bound method Board.shapeAt of <tetr.Board object at 0x00000121D14DF370» = <tetr.Board object at 0x00000121D14DF370>.shapeAt
+E + where <tetr.Board object at 0x00000121D14DF370> = <test_try_move.TestTetris object at 0x00000121D209A2F0>.board
+E + and 3 = Tetrominoe.LineShape	
 			
+			
+ПРичина:
+
+	неверный код тестов (исправлено)	
+                			
 						
 		
 			
