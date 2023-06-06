@@ -1,4 +1,5 @@
 name: Python application
+
 on:
   push:
     branches: [ "master" ]
