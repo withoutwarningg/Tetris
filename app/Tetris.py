@@ -1,4 +1,5 @@
 import sys
+sys.path.append('/home/youngpasha/project/tetris/app')
 from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QApplication
 from app.Board import Board
 
